@@ -1,0 +1,15 @@
+<div class="employee" (dblclick)="onToggle(employee)">
+  <h3>
+    {{ employee.name }}
+    <fa-icon (click)="onDelete(employee)" [ngStyle]="{ color: 'red' }" [icon]="faTimes"></fa-icon>
+  </h3>
+  <p>{{ employee.designation }}</p>
+  <p>{{ employee.salary }}</p>
+  <p>{{ employee.bio | truncate }}</p>
+  <p>{{ employee.dob }}</p>
+  <app-button
+    color="{{ showEditEmp ? 'green' : 'green' }}"
+    text="{{ showEditEmp ? 'Edit' : 'Edit' }}"
+    (btnClick)="toggleAddEmp(employee)"
+  ></app-button>
+</div>

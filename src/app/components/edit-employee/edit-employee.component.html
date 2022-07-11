@@ -1,0 +1,24 @@
+<!-- <form *ngIf="showAddEmployee" class="edit-form" (ngSubmit)="onSubmit()"> -->
+<form class="edit-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="name">NAME</label>
+    <input type="text" name="name" [(ngModel)]="employee.name" id="name" placeholder="Add Name" />
+  </div>
+  <div class="form-control">
+    <label for="designation">DESIGNATION</label>
+    <input type="text" name="designation" [(ngModel)]="employee.designation" id="designation" placeholder="Add Designation" />
+  </div>
+  <div class="form-control">
+    <label for="salary">SALARY</label>
+    <input type="number" name="salary" appNumbersOnly [(ngModel)]="employee.salary" id="salary" placeholder="Add Salary" />
+  </div>
+  <div class="form-control">
+    <label for="bio">BIO</label>
+    <input type="text" name="bio" [(ngModel)]="employee.bio" id="bio" placeholder="Describe" />
+  </div>
+  <div class="form-control">
+    <label for="day">Date Of Birth</label>
+    <input type="text" name="day" [(ngModel)]="employee.dob" id="dob" placeholder="Add Date" />
+  </div>
+  <input type="submit" value="Edit Employee" class="btn btn-block" />
+</form>

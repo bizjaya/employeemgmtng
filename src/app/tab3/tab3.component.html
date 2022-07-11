@@ -1,0 +1,4 @@
+<app-header></app-header>
+<app-employee-item *ngFor="let employee of employees" [employee]="employee" (onDeleteEmployee)="deleteEmployee(employee)"></app-employee-item>
+
+<app-footer></app-footer>
